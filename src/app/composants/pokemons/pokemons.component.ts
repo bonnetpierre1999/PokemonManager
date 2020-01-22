@@ -6,13 +6,12 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./pokemons.component.css']
 })
 export class PokemonsComponent implements OnInit {
-
+image = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/';
   pokemons = [{
     id: 1,
     nom: 'Bulbizarre',
     categorie: 'graine',
-    type1: 'Plante',
-    type2: 'Poison',
+    type: ['Plante', 'Poison'],
     taille: 0.7,
     poids: 6.9,
   },
@@ -21,8 +20,7 @@ export class PokemonsComponent implements OnInit {
       id: 2,
       nom: 'Herbizarre',
       categorie: 'graine',
-      type1: 'Plante',
-      type2: 'Poison',
+      type: ['Plante', 'Poison'],
       taille: 1.0,
       poids: 13.0,
     },
@@ -31,8 +29,7 @@ export class PokemonsComponent implements OnInit {
       id: 3,
       nom: 'Florizarre',
       categorie: 'graine',
-      type1: 'Plante',
-      type2: 'Poison',
+      type: ['Plante', 'Poison'],
       taille: 2.0,
       poids: 100.0,
     },
@@ -41,8 +38,7 @@ export class PokemonsComponent implements OnInit {
       id: 4,
       nom: 'Salameche',
       categorie: 'lézard',
-      type1: 'Feu',
-      type2: '',
+      type: ['Feu'],
       taille: 0.6,
       poids: 8.5,
     },
@@ -51,8 +47,7 @@ export class PokemonsComponent implements OnInit {
       id: 5,
       nom: 'Reptincel',
       categorie: 'flamme',
-      type1: 'Feu',
-      type2: '',
+      type: ['Feu'],
       taille: 1.1,
       poids: 19.0,
     },
@@ -61,8 +56,7 @@ export class PokemonsComponent implements OnInit {
       id: 6,
       nom: 'Dracaufeu',
       categorie: 'flamme',
-      type1: 'Feu',
-      type2: '',
+      type: ['Feu', 'Vol'],
       taille: 1.7,
       poids: 90.5,
     }];

@@ -1,11 +1,26 @@
-<p>Les premiers pokémon</p>
-<p>Dans l'ordre du Pokédex</p>
-<div *ngIf="pokemons" id="col">
-  <ul *ngFor="let poke of pokemons">
-    <li>{{poke.nom}}<br>
-      Catégorie: {{poke.categorie}}<br>
-      Type: {{poke.type1}} {{poke.type2}}<br>
-      Taille: {{poke.taille}}<br>
-      Poids: {{poke.poids}}</li>
-  </ul>
+<div *ngIf="pokemons" class="container">
+  <p>Les premiers pokémon</p>
+  <p>Dans l'ordre du Pokédex</p>
+  <div class="row">
+    <ul *ngFor="let poke of pokemons" class="list-group" class="col-4">
+      <li class="list-group-item"><h5>{{poke.nom}}</h5>
+        <img src="{{image}}{{poke.id}}.png"><br>
+        Catégorie: {{poke.categorie}}<br>
+        Type :
+        <span *ngFor="let t of poke.type; let dernier=last">
+          <span>{{t}}</span><span *ngIf="!dernier">,</span>
+          {{poke.type1}} {{poke.type2}}</span><br>
+
+        <span *ngIf="poke.taille; else na">Taille: {{poke.taille}} m</span>
+        <ng-template #na>Taille: N/A</ng-template>
+        <br>
+
+        <span *ngIf="poke.poids; else na">Poids: {{poke.poids}} kg</span>
+        <ng-template #na>Poids: N/A</ng-template>
+        <br>
+
+      </li>
+      <br>
+    </ul>
+  </div>
 </div>
