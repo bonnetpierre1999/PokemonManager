@@ -9,6 +9,7 @@ export class PokemonsComponent implements OnInit {
 
   constructor() { }
 
+
   ngOnInit() {
   }
 
