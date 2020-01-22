@@ -1,1 +1,11 @@
-<p>pokemons works!</p>
+<p>Les premiers pokémon</p>
+<p>Dans l'ordre du Pokédex</p>
+<div *ngIf="pokemons" id="col">
+  <ul *ngFor="let poke of pokemons">
+    <li>{{poke.nom}}<br>
+      Catégorie: {{poke.categorie}}<br>
+      Type: {{poke.type1}} {{poke.type2}}<br>
+      Taille: {{poke.taille}}<br>
+      Poids: {{poke.poids}}</li>
+  </ul>
+</div>
