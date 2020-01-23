@@ -1,7 +1,11 @@
-<h2><p>Générations de Pokémon :</p></h2>
-<p>LES DIFFÉRENTES GÉNÉRATIONS :</p>
-<div *ngIf="tabGenerations">
-  <ul *ngFor="let generation of tabGenerations">
-    <li>{{generation}}</li>
-  </ul>
-</div>
+<span class="gauche">
+  <div class="container">
+    <h2><p>Générations de Pokémon :</p></h2>
+    <p>LES DIFFÉRENTES GÉNÉRATIONS :</p>
+    <div *ngIf="tabGenerations">
+      <ul *ngFor="let generation of tabGenerations">
+        <li>{{generation}}</li>
+      </ul>
+    </div>
+  </div>
+</span>

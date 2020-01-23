@@ -1,17 +1,22 @@
-<li class="list-group-item">
-  <img src="{{image}}{{pokemon.id}}.png" alt=poke.nom><br>
-  <h5>{{pokemon.nom}}</h5>
-  Catégorie: {{pokemon.categorie}}<br>
-  Type :
-  <span *ngFor="let t of pokemon.type; let dernier=last">
+<div (click)="FctclickSurPokemon()">
+  <li class="list-group-item">
+  <span class="flotte">
+  <img src="{{image}}{{pokemon.id}}.png" alt="{{pokemon.nom}}"><br>
+  </span>
+    <h5>{{pokemon.nom}}</h5>
+    Catégorie: {{pokemon.categorie}}<br>
+    Type :
+    <span *ngFor="let t of pokemon.type; let dernier=last">
           <span>{{t}}</span><span *ngIf="!dernier">,</span></span><br>
 
-  <span *ngIf="pokemon.taille; else na">Taille: {{pokemon.taille}} m</span>
-  <ng-template #na>Taille: N/A</ng-template>
-  <br>
+    <span *ngIf="pokemon.taille; else na">Taille: {{pokemon.taille}} m</span>
+    <ng-template #na>Taille: N/A</ng-template>
+    <br>
 
-  <span *ngIf="pokemon.poids; else na">Poids: {{pokemon.poids}} kg</span>
-  <ng-template #na>Poids: N/A</ng-template>
-  <br>
+    <span *ngIf="pokemon.poids; else na">Poids: {{pokemon.poids}} kg</span>
+    <ng-template #na>Poids: N/A</ng-template>
+    <br>
 
-</li>
+  </li>
+
+</div>

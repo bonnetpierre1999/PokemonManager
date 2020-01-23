@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-pokemon',
@@ -8,13 +8,18 @@ import {Component, Input, OnInit} from '@angular/core';
 export class PokemonComponent implements OnInit {
 
   @Input() pokemon;
-
+  @Output() clickSurPokemon = new EventEmitter();
   image = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/';
 
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
+  }
+
+  FctclickSurPokemon() {
+    this.clickSurPokemon.emit(this.pokemon.nom);
   }
 
 }

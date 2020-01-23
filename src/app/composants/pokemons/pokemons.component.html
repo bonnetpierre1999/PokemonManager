@@ -1,9 +1,10 @@
-<div *ngIf="pokemons" class="container">
-  <div class="row">
-    <ul *ngFor="let poke of pokemons" class="col-4">
-      <app-pokemon [pokemon]=poke></app-pokemon>
-      <br>
-    </ul>
+  <div *ngIf="pokemons" class="container">
+    <img src="../../assets/pokedex.png" alt="pokedex" class="alignement"><br>
+    <p *ngIf="p">Pokemon : {{p}}</p>
+    <div class="row">
+      <ul *ngFor="let poke of pokemons" class="col-4">
+        <app-pokemon [pokemon]=poke (clickSurPokemon)="p=$event"></app-pokemon>
+        <br>
+      </ul>
+    </div>
   </div>
-</div>
-
