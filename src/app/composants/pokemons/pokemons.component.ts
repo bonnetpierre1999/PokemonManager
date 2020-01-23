@@ -6,7 +6,7 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./pokemons.component.css']
 })
 export class PokemonsComponent implements OnInit {
-image = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/';
+
   pokemons = [{
     id: 1,
     nom: 'Bulbizarre',

@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GenerationsComponent } from './composants/generations/generations.component';
 import { PokemonsComponent } from './composants/pokemons/pokemons.component';
+import { PokemonComponent } from './composants/pokemon/pokemon.component';
+
 
 import {LOCALE_ID} from '@angular/core';
 import {registerLocaleData} from '@angular/common';
@@ -15,7 +17,8 @@ registerLocaleData(localeFR);
   declarations: [
     AppComponent,
     GenerationsComponent,
-    PokemonsComponent
+    PokemonsComponent,
+    PokemonComponent,
   ],
   imports: [
     BrowserModule,
