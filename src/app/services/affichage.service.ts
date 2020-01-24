@@ -43,8 +43,8 @@ export class AffichageService {
     return this.pokemons.filter(p => p.nom.match(regex));
   }
 
-  appelAUneAPI() {
-    return this.monHttp.get('https://pokeapi.co/api/v2/pokemon');
+  appelAUneAPIGeneration() {
+    return this.monHttp.get('https://pokeapi.co/api/v2/generation/');
   }
 
 }

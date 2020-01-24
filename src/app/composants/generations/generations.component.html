@@ -1,10 +1,17 @@
 <span class="gauche">
   <div class="container">
     <h2><p>Générations de Pokémon :</p></h2>
+    <!--
     <div *ngIf="tabGenerations">
       <ul *ngFor="let generation of tabGenerations" class="list-group" class="espace">
         <a href='' class="list-group-item">{{generation}}</a>
       </ul>
-    </div>
+    </div> -->
+
+      <ul *ngFor="let generation of tabGenerations.results" class="list-group" class="espace">
+        <a href='' class="list-group-item">{{generation.name | titlecase}}</a>
+      </ul>
+
+
   </div>
 </span>
