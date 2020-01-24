@@ -13,6 +13,7 @@ import {registerLocaleData} from '@angular/common';
 import localeFR from '@angular/common/locales/fr';
 import {FormsModule} from '@angular/forms';
 import { HeaderComponent } from './composants/header/header.component';
+import { ErreurComponent } from './composants/erreur/erreur.component';
 registerLocaleData(localeFR);
 
 @NgModule({
@@ -22,6 +23,7 @@ registerLocaleData(localeFR);
     PokemonsComponent,
     PokemonComponent,
     HeaderComponent,
+    ErreurComponent,
   ],
   imports: [
     BrowserModule,

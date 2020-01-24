@@ -1,0 +1,12 @@
+.enTete{
+  float: top;
+
+  position:fixed;
+}
+
+.imagehaut {
+  top: 0px;
+  left: 0px;
+  width: 300px;
+  height: 100px;
+}
