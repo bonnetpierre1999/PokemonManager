@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {AffichageService} from '../../services/affichage.service';
+import {Pokemon} from '../../pokemon';
 
 @Component({
   selector: 'app-pokemons',
@@ -9,7 +10,17 @@ import {AffichageService} from '../../services/affichage.service';
 export class PokemonsComponent implements OnInit {
 
   p;
-  pokemons;
+  pokemons: Array<Pokemon>;
+  cpteur: number;
+
+  envoyer(nom) {
+    this.pokemons =  this.pokemonsService.getPokemonFiltrer(nom);
+  }
+
+  initTableau() {
+    this.pokemons = this.pokemonsService.getPokemon();
+    this.cpteur = this.pokemonsService.cpt();
+  }
 
   constructor(private pokemonsService: AffichageService) {
   }
@@ -22,4 +33,7 @@ export class PokemonsComponent implements OnInit {
     this.givePoke();
   }
 
+  reinitRecherche() {
+    this.pokemons = this.pokemonsService.getPokemon();
+  }
 }

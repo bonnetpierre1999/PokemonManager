@@ -1,7 +1,14 @@
   <div *ngIf="pokemons" class="container" >
     <img src="../../assets/pokedex.png" alt="pokedex" class="alignement"><br>
+
+    <form #formPokemon="ngForm" (keyup)="envoyer(formPokemon.value.pokemon)">
+      <input type="text" name="pokemon" ngModel>
+      <button type='reset' (click)="reinitRecherche()">Réinitialiser</button>
+    </form><br>
+
     <p *ngIf="p">Pokemon : {{p}}</p>
     <div class="row">
+      <div *ngIf="pokemons.length<1">Aucun Pokemon trouvés</div>
       <ul *ngFor="let poke of pokemons" class="col-4">
         <app-pokemon [pokemon]=poke (clickSurPokemon)="p=$event"></app-pokemon>
         <br>
