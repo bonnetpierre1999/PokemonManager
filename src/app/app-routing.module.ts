@@ -7,7 +7,7 @@ import {ErreurComponent} from './composants/erreur/erreur.component';
 const routes: Routes = [
   {path: 'Pokemon', component: PokemonsComponent},
   {path: 'Generation', component: GenerationsComponent},
-  {path: '', component: GenerationsComponent},
+  {path: '', redirectTo: 'Pokemon', pathMatch: 'full'},
   {path: '**', component: ErreurComponent}
 ];
 

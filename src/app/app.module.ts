@@ -14,6 +14,7 @@ import localeFR from '@angular/common/locales/fr';
 import {FormsModule} from '@angular/forms';
 import { HeaderComponent } from './composants/header/header.component';
 import { ErreurComponent } from './composants/erreur/erreur.component';
+import {HttpClientModule} from '@angular/common/http';
 registerLocaleData(localeFR);
 
 @NgModule({
@@ -28,7 +29,8 @@ registerLocaleData(localeFR);
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [{provide: LOCALE_ID, useValue: 'fr'}],
   bootstrap: [AppComponent]
