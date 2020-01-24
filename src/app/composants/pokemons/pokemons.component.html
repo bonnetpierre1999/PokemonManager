@@ -1,5 +1,6 @@
   <div *ngIf="pokemons" class="container" >
-    <img src="../../assets/pokedex.png" alt="pokedex" class="alignement"><br>
+
+    <img src="../../assets/pokedex.png" alt="pokedex" class="alignement" (click)="reinitRecherche()"><br>
 
     <form #formPokemon="ngForm" (keyup)="envoyer(formPokemon.value.pokemon)">
       <input type="text" name="pokemon" ngModel>

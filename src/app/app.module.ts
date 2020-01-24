@@ -12,6 +12,7 @@ import {LOCALE_ID} from '@angular/core';
 import {registerLocaleData} from '@angular/common';
 import localeFR from '@angular/common/locales/fr';
 import {FormsModule} from '@angular/forms';
+import { HeaderComponent } from './composants/header/header.component';
 registerLocaleData(localeFR);
 
 @NgModule({
@@ -20,6 +21,7 @@ registerLocaleData(localeFR);
     GenerationsComponent,
     PokemonsComponent,
     PokemonComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,

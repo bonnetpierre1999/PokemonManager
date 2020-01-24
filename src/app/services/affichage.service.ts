@@ -8,6 +8,7 @@ export class AffichageService {
 
   pokemons = [{
     id: 1,
+    generation: 1,
     nom: 'Bulbizarre',
     categorie: 'graine',
     type: ['Plante', 'Poison'],
@@ -17,6 +18,7 @@ export class AffichageService {
 
     {
       id: 2,
+      generation: 1,
       nom: 'Herbizarre',
       categorie: 'graine',
       type: ['Plante', 'Poison'],
@@ -26,6 +28,7 @@ export class AffichageService {
 
     {
       id: 3,
+      generation: 1,
       nom: 'Florizarre',
       categorie: 'graine',
       type: ['Plante', 'Poison'],
@@ -35,6 +38,7 @@ export class AffichageService {
 
     {
       id: 4,
+      generation: 1,
       nom: 'Salameche',
       categorie: 'lézard',
       type: ['Feu'],
@@ -44,6 +48,7 @@ export class AffichageService {
 
     {
       id: 5,
+      generation: 1,
       nom: 'Reptincel',
       categorie: 'flamme',
       type: ['Feu'],
@@ -53,6 +58,7 @@ export class AffichageService {
 
     {
       id: 6,
+      generation: 1,
       nom: 'Dracaufeu',
       categorie: 'flamme',
       type: ['Feu', 'Vol'],

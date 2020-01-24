@@ -8,8 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class GenerationsComponent implements OnInit {
 
   // tslint:disable-next-line:max-line-length
-  private tabGenerations = ['Génération I', 'Génération II', 'Génération III', 'Génération IV', 'Génération V',
-                            'Génération VI', 'Génération VII', 'Génération VIII'];
+  private tabGenerations = ['Génération I - 151 Pokemon', 'Génération II - 100 Pokemon', 'Génération III - 135 Pokemon', 'Génération IV - 107 Pokemon',
+    // tslint:disable-next-line:max-line-length
+                            'Génération V - 156 Pokemon', 'Génération VI - 72 Pokemon', 'Génération VII - 88 Pokemon', 'Génération VIII - 81 Pokemon'];
 
   constructor() { }
 
